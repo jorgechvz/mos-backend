@@ -6,7 +6,6 @@ from src.routes.v1 import health_router, stream_router
 
 app = FastAPI()
 
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # NOTE: Adjust for production use
@@ -23,9 +22,3 @@ app.include_router(
     stream_router,
     prefix="/stream",
 )
-
-
-if __name__ == "__main__":
-    import uvicorn
-
-    uvicorn.run("src.main:app", host="0.0.0.0", port=8000, reload=True)
