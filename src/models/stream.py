@@ -19,3 +19,9 @@ class StreamTokenResponse(BaseModel):
     token: str
     expires_in: int
     obtained_at: int
+
+
+class MosRequest(BaseModel):
+    """ Model for MOS evaluation request. """
+    recording_url: str
+    reference_filename: str = "reference.mp3"
