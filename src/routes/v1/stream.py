@@ -12,7 +12,8 @@ from src.dependencies.stream_dep import get_stream_client
 from src.application.mos import calculate_custom_mos
 from src.config import settings
 
-REFERENCE_DIR = "../../references"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+REFERENCE_DIR = os.path.join(BASE_DIR, "../../references")
 
 router = APIRouter(tags=["stream"])
 
